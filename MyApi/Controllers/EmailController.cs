@@ -111,26 +111,6 @@ namespace MyApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Email/5
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteEmail(int id)
-        //{
-        //    if (_context.Emails == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var email = await _context.Emails.FindAsync(id);
-        //    if (email == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _context.Emails.Remove(email);
-        //    await _context.SaveChangesAsync();
-
-        //    return NoContent();
-        //}
-
         private bool EmailExists(int id)
         {
             return (_context.Emails?.Any(e => e.EmailId == id)).GetValueOrDefault();
